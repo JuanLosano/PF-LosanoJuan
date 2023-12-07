@@ -9,54 +9,39 @@
 }
 
 body {
-  background-color: #fff59d;
+  background-color: #eceff1;
 }
 
 /* INICIO DE HEADER Y NAV */
-.header {
-  background-color: #1b3039;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 85px;
-  padding: 5px 10%;
+.navbar-brand img {
+  width: 50px; 
+  height: auto; 
+  padding: 5px; 
+  animation: girar 4s infinite;
 }
 
-.menu-icon {
-  display: none;
-  font-size: 1.5em;
-  cursor: pointer;
+@keyframes girar{
+  to{
+    transform: rotate(-180deg);
+  }
+  from{
+    transform: rotate(180deg);
+  }
 }
 
-.header .logo {
-  cursor: pointer;
-}
-.header .logo img {
-  height: 70px;
-  width: auto;
-  transition: all 0.3s;
-}
-.header .logo img:hover {
-  transform: scale(1.2);
-}
-.header .nav-links {
-  list-style: none;
-  display: flex;
-}
-.header .nav-links li {
-  padding: 0 20px;
-}
-.header .nav-links li:hover {
-  transform: scale(1.1);
-}
-.header .nav-links a {
-  font-size: 700;
+.titulo{
   color: #eceff1;
-  text-decoration: none;
 }
-.header .nav-links li a:hover {
-  color: #ffbc0e;
+
+.enlace{
+  color: #eceff1;
 }
+
+.enlace:hover{
+  background-color: #8b0eff;
+  transition: 0.5s;
+}
+/* Fin de header y nav*/
 
 /* INICIO DE BANNER */
 .banner {
@@ -81,11 +66,12 @@ body {
 
 .titulo-portada {
   font-size: 3em;
+  color:#eceff1;
   z-index: 2;
 }
 
 .btn-banner {
-  background-color: #1b3039;
+  background-color: black;
   text-decoration: none;
   padding: 1em 4em;
   color: #eceff1;
@@ -95,7 +81,7 @@ body {
   z-index: 3;
 }
 .btn-banner:hover {
-  background-color: #ffbc0e;
+  background-color: #8b0eff;
   transition: 0.5s;
 }
 
