@@ -109,7 +109,7 @@ body {
 }
 
 .carrucel {
-  width: 80%;
+  width: 70%;
   height: 40%;
   background-color: #ffbc0e;
   display: flex;
@@ -288,6 +288,38 @@ button:hover {
   border-radius: 8px;
 }
 
+.accordion .accordion-item{
+  width: 100%;
+  background-color: #212529;
+}
+
+.accordion .accordion-button{
+  background-color: #212529;
+  color: #eceff1;
+}
+
+.accordion .accordion-collapse{
+  background-color: #212529; 
+      color: #eceff1;
+}
+
+.accordion .accordion-button:hover {
+  background-color: #8b0eff; 
+}
+
+.accordion-button::after{
+background-color: #eceff1;
+} 
+
+.accordion{
+  width: 800px;
+}
+
+
+
+
+
+
 /* Responsive*/
 /* Inicio*/
 /* Nostros*/
@@ -295,6 +327,7 @@ button:hover {
   .article {
     padding: 10px;
     margin-top: 200px;
+    
   }
   .carousel {
     width: 100%;
@@ -312,5 +345,34 @@ button:hover {
     padding: 20px 0;
   }
 }
+
+@media (max-width:1020px) {
+  .accordion{
+    width: 500px;
+  }
+}
+
+@media (max-width:610px) {
+  .accordion{
+    width: 400px;
+  }
+}
+
+@media (max-width:525px) {
+  .accordion{
+    width: 300px;
+  }
+
+  .article{
+    margin-bottom: 260px;
+  
+  }
+}
+
+
+
+
+
+
 
 /*# sourceMappingURL=style.css.map */
