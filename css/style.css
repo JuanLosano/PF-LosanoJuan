@@ -257,8 +257,9 @@ button:hover {
 }
 
 /* Menu de cafes*/
+
 .article h1 {
-  margin: 100px;
+  margin: 50px;
   text-align: start;
 }
 
@@ -276,7 +277,8 @@ button:hover {
   padding: 10px;
   border-radius: 8px;
   background-color: #fff;
-  margin: 2px;
+  margin: 4px;
+  
 }
 .coffee-item:hover {
   transform: scale(1.1);
