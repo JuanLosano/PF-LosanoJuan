@@ -1,73 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+@import "./partials/variables";
+@import "./partials/reset";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-  font-family: 'Nunito', sans-serif;
-}
+
+
 
 body {
-  background-color: #fff59d;
+  background-color: #eceff1;
 }
 
 /* INICIO DE HEADER Y NAV */
 
-.header {
-  background-color: #1b3039;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 85px;
-  padding: 5px 10%;
+.navbar-brand img {
+  width: 50px;
+  height: auto;
+  padding: 5px;
+  animation: girar 4s infinite;
 }
 
-.menu-icon {
-  display: none;
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
-.header {
-  .logo {
-    cursor: pointer;
-
-    img {
-      height: 70px;
-      width: auto;
-      transition: all 0.3s;
-
-      &:hover {
-        transform: scale(1.2);
-      }
-    }
+@keyframes girar {
+  to {
+    transform: rotate(-180deg);
   }
 
-  .nav-links {
-    list-style: none;
-    display: flex;
-
-    li {
-      padding: 0 20px;
-
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-
-    a {
-      font-size: 700;
-      color: #eceff1;
-      text-decoration: none;
-    }
-
-    li a:hover {
-      color: #ffbc0e;
-    }
+  from {
+    transform: rotate(180deg);
   }
 }
+
+.titulo {
+  color: #eceff1;
+}
+
+.enlace {
+  color: #eceff1;
+
+  &:hover {
+    background-color: #8b0eff;
+    transition: 0.5s;
+  }
+}
+
+/* Fin de header y nav*/
 
 /* INICIO DE BANNER */
 
@@ -94,11 +67,12 @@ body {
 
 .titulo-portada {
   font-size: 3em;
+  color: #eceff1;
   z-index: 2;
 }
 
 .btn-banner {
-  background-color: #1b3039;
+  background-color: black;
   text-decoration: none;
   padding: 1em 4em;
   color: #eceff1;
@@ -108,7 +82,7 @@ body {
   z-index: 3;
 
   &:hover {
-    background-color: #ffbc0e;
+    background-color: #8b0eff;
     transition: 0.5s;
   }
 }
@@ -117,9 +91,6 @@ body {
 
 .article {
   width: 100%;
-  height: 100vh;
-
-  /*background-color:;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -139,22 +110,22 @@ body {
 }
 
 .carrucel {
-  width: 80%;
-  height: 40%;
+  width: 70%;
+  height: 350px;
   background-color: #ffbc0e;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 2rem;
 
   img {
     width: 0px;
     flex-grow: 1;
     object-fit: cover;
-    opacity: .8;
+    opacity: 0.8;
     transition: 0.5s ease;
 
     &:hover {
-      cursor: crosshair;
       width: 300px;
       opacity: 1;
       filter: contrast(120%);
@@ -194,7 +165,7 @@ body {
 }
 
 footer {
-  background: #333;
+  background: black;
   padding: 20px 0;
   color: #fff;
   text-align: center;
@@ -219,8 +190,12 @@ footer {
   }
 
   ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     list-style-type: none;
     padding: 0;
+    gap: 1rem;
   }
 
   a {
@@ -230,7 +205,6 @@ footer {
 
   .social {
     display: flex;
-    flex-direction: column;
     align-items: center;
 
     ul {
@@ -263,7 +237,7 @@ footer {
 
 /* Formulario*/
 
-.formulario-pepe {
+.formulario {
   width: 800px;
   margin: 50px auto;
   background-color: #fff;
@@ -303,7 +277,7 @@ button {
 /* Menu de cafes*/
 
 .article h1 {
-  margin: 100px;
+  margin: 50px;
   text-align: start;
 }
 
@@ -313,6 +287,7 @@ button {
   gap: 20px;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 2rem;
 }
 
 .coffee-item {
@@ -321,7 +296,7 @@ button {
   padding: 10px;
   border-radius: 8px;
   background-color: #fff;
-  margin: 2px;
+  margin: 4px;
 
   &:hover {
     transform: scale(1.1);
@@ -333,15 +308,120 @@ button {
   border-radius: 8px;
 }
 
-/* Responsive*/
-/* Inicio*/
+.accordion {
+  .accordion-item {
+    width: 100%;
+    background-color: #212529;
+  }
 
-@media (max-width: 600px) {
-  .banner, .article, footer {}
+  .accordion-button, .accordion-collapse {
+    background-color: #212529;
+    color: #eceff1;
+  }
+
+  .accordion-button:hover {
+    background-color: #8b0eff;
+  }
 }
 
-/* Nostros*/
+.accordion-button::after {
+  background-color: #eceff1;
+}
 
+.accordion {
+  width: 800px;
+}
+
+.cards-nosotros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 30px #000;
+    transition: 0.5s ease;
+
+    &:hover {
+      width: 350px;
+      opacity: 1;
+      filter: contrast(120%);
+    }
+  }
+}
+
+.contenedor-locales {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.texto-locales {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagen-locales img {
+  width: 500px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.carta-bs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+}
+
+.contenedor-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.carta-menu {
+  width: 300px;
+  height: 200px;
+  position: relative;
+}
+
+.card-text {
+  position: absolute;
+  top: 140px;
+  color: white;
+  width: 300px;
+  height: 60px;
+  background-color: #7c3b1a;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.carta-menu:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+/* Responsive*/
+
+/* Nostros*/
 @media only screen and (max-width: 600px) {
   .article {
     padding: 10px;
@@ -359,12 +439,56 @@ button {
 
 /* Contato*/
 
-@media only screen and (max-width: 600px) {
-  .article, .formulario-pepe form {
-    padding: 10px;
+@media (max-width: 800px) {
+  .formulario {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1020px) {
+  .accordion {
+    width: 500px;
+  }
+}
+
+@media (max-width: 610px) {
+  .accordion {
+    width: 400px;
+  }
+}
+
+@media (max-width: 525px) {
+  .accordion {
+    width: 300px;
   }
 
-  footer {
-    padding: 20px 0;
+  .article {
+    margin-bottom: 260px;
+  }
+}
+
+@media screen and (min-width: 370px) and (max-width: 768px) {
+  .cards-nosotros {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    img:hover {
+      width: 200px;
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .contenedor-locales {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imagen-locales img {
+    width: 350px;
+    height: 250px;
   }
 }
