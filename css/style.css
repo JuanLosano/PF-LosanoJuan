@@ -82,7 +82,7 @@ body {
   z-index: 3;
 }
 .btn-banner:hover {
-  background-color: #8b0eff;
+  background-color: turquoise;
   transition: 0.5s;
 }
 
@@ -160,7 +160,7 @@ body {
 
 footer {
   background: black;
-  padding: 20px 0;
+  padding: 20px 0px;
   color: #fff;
   text-align: center;
 }
@@ -229,7 +229,7 @@ footer {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 label {
@@ -376,7 +376,7 @@ button:hover {
   position: relative;
 }
 
-.card-text {
+.carta-text {
   position: absolute;
   top: 140px;
   color: white;

@@ -2,10 +2,8 @@
 @import "./partials/reset";
 
 
-
-
 body {
-  background-color: #eceff1;
+  background-color: $fondo;
 }
 
 /* INICIO DE HEADER Y NAV */
@@ -35,7 +33,7 @@ body {
   color: #eceff1;
 
   &:hover {
-    background-color: #8b0eff;
+    background-color: $hover;
     transition: 0.5s;
   }
 }
@@ -46,20 +44,20 @@ body {
 
 .banner {
   position: relative;
-  width: 100%;
+  width: $total;
   height: 80vh;
-  background-color: turquoise;
-  display: flex;
+  background-color: $banner;
+  display: $flexible;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: $centro;
+  align-items: $centro;
 
   video {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: $total;
+    height: $total;
     object-fit: cover;
     z-index: 1;
   }
@@ -67,22 +65,22 @@ body {
 
 .titulo-portada {
   font-size: 3em;
-  color: #eceff1;
+  color: $fondo;
   z-index: 2;
 }
 
 .btn-banner {
-  background-color: black;
-  text-decoration: none;
+  background-color: $negro;
+  text-decoration: $nada;
   padding: 1em 4em;
-  color: #eceff1;
+  color: $fondo;
   font-size: 1.25em;
   margin: 1em 0;
   border-radius: 0.6em;
   z-index: 3;
 
   &:hover {
-    background-color: #8b0eff;
+    background-color: $banner;
     transition: 0.5s;
   }
 }
@@ -90,11 +88,11 @@ body {
 /* INICIO DE ARTICULO */
 
 .article {
-  width: 100%;
-  display: flex;
+  width: $total;
+  display: $flexible;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: $centro;
+  align-items: $centro;
 }
 
 .title-article {
@@ -113,20 +111,20 @@ body {
   width: 70%;
   height: 350px;
   background-color: #ffbc0e;
-  display: flex;
+  display: $flexible;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 2rem;
 
   img {
-    width: 0px;
+    width: $cero;
     flex-grow: 1;
     object-fit: cover;
     opacity: 0.8;
     transition: 0.5s ease;
 
     &:hover {
-      width: 300px;
+      width: $tamano-carta;
       opacity: 1;
       filter: contrast(120%);
     }
@@ -136,14 +134,14 @@ body {
 /* Segunda parte locales */
 
 .custom-text-block {
-  display: flex;
-  align-items: center;
+  display: $flexible;
+  align-items: $centro;
 }
 
 .custom-text {
   position: relative;
   width: 50%;
-  text-align: center;
+  text-align: $centro;
   left: 250px;
 }
 
@@ -165,14 +163,14 @@ body {
 }
 
 footer {
-  background: black;
-  padding: 20px 0;
+  background: $negro;
+  padding: 20px $cero;
   color: #fff;
-  text-align: center;
+  text-align: $centro;
 }
 
 .footer-content {
-  display: flex;
+  display: $flexible;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -190,26 +188,26 @@ footer {
   }
 
   ul {
-    display: flex;
+    display: $flexible;
     flex-direction: row;
-    justify-content: center;
-    list-style-type: none;
+    justify-content: $centro;
+    list-style-type: $nada;
     padding: 0;
     gap: 1rem;
   }
 
   a {
     color: #fff;
-    text-decoration: none;
+    text-decoration: $nada;
   }
 
   .social {
-    display: flex;
-    align-items: center;
+    display: $flexible;
+    align-items: $centro;
 
     ul {
-      display: flex;
-      list-style-type: none;
+      display: $flexible;
+      list-style-type: $nada;
       padding: 0;
     }
 
@@ -230,8 +228,8 @@ footer {
 }
 
 .carousel-item img {
-  width: 100%;
-  height: 100%;
+  width: $total;
+  height: $total;
   object-fit: cover;
 }
 
@@ -243,7 +241,7 @@ footer {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: $cero $cero 10px rgba(0, 0, 0, 0.1);
 }
 
 label {
@@ -253,7 +251,7 @@ label {
 }
 
 input, textarea {
-  width: 100%;
+  width: $total;
   padding: 8px;
   margin-bottom: 16px;
   box-sizing: border-box;
@@ -265,7 +263,7 @@ button {
   background-color: #4caf50;
   color: #fff;
   padding: 10px 15px;
-  border: none;
+  border: $nada;
   border-radius: 4px;
   cursor: pointer;
 
@@ -282,16 +280,16 @@ button {
 }
 
 .menu-container {
-  display: grid;
+  display: $carta;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
-  justify-content: center;
+  justify-content: $centro;
   margin-top: 20px;
   margin-bottom: 2rem;
 }
 
 .coffee-item {
-  text-align: center;
+  text-align: $centro;
   border: 1px solid #ddd;
   padding: 10px;
   border-radius: 8px;
@@ -304,13 +302,13 @@ button {
 }
 
 .coffee-image {
-  max-width: 100%;
+  max-width: $total;
   border-radius: 8px;
 }
 
 .accordion {
   .accordion-item {
-    width: 100%;
+    width: $total;
     background-color: #212529;
   }
 
@@ -320,12 +318,12 @@ button {
   }
 
   .accordion-button:hover {
-    background-color: #8b0eff;
+    background-color: $hover;
   }
 }
 
 .accordion-button::after {
-  background-color: #eceff1;
+  background-color: $fondo;
 }
 
 .accordion {
@@ -333,7 +331,7 @@ button {
 }
 
 .cards-nosotros {
-  display: grid;
+  display: $carta;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 32px;
   margin-top: 40px;
@@ -341,9 +339,9 @@ button {
 
   img {
     border-radius: 8px;
-    width: 100%;
+    width: $total;
     height: auto;
-    box-shadow: 0px 0px 30px #000;
+    box-shadow: $cero $cero 30px #000;
     transition: 0.5s ease;
 
     &:hover {
@@ -355,38 +353,38 @@ button {
 }
 
 .contenedor-locales {
-  display: flex;
+  display: $flexible;
   gap: 2rem;
   margin-bottom: 30px;
-  justify-content: center;
+  justify-content: $centro;
 }
 
 .texto-locales {
-  width: 300px;
-  display: flex;
+  width: $tamano-carta;
+  display: $flexible;
   flex-direction: column;
-  align-items: center;
+  align-items: $centro;
 }
 
 .imagen-locales img {
   width: 500px;
-  height: 300px;
+  height: $tamano-carta;
   border-radius: 5px;
 }
 
 .carta-bs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: $flexible;
+  justify-content: $centro;
+  align-items: $centro;
 }
 
 .card-img-top {
-  width: 100%;
-  height: 100%;
+  width: $total;
+  height: $total;
 }
 
 .contenedor-menu {
-  display: flex;
+  display: $flexible;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 2rem;
@@ -394,22 +392,22 @@ button {
 }
 
 .carta-menu {
-  width: 300px;
+  width: $tamano-carta;
   height: 200px;
   position: relative;
 }
 
-.card-text {
+.carta-text {
   position: absolute;
   top: 140px;
   color: white;
-  width: 300px;
+  width: $tamano-carta;
   height: 60px;
   background-color: #7c3b1a;
   opacity: 0.7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: $flexible;
+  justify-content: $centro;
+  align-items: $centro;
   font-size: 20px;
   font-family: sans-serif;
 }
@@ -429,7 +427,7 @@ button {
   }
 
   .carousel {
-    width: 100%;
+    width: $total;
   }
 
   footer {
@@ -459,7 +457,7 @@ button {
 
 @media (max-width: 525px) {
   .accordion {
-    width: 300px;
+    width: $tamano-carta;
   }
 
   .article {
