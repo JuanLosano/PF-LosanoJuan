@@ -1,0 +1,53 @@
+
+/*Mobil */
+@mixin cel($mobil: 610px) {
+  @media screen and (max-width: $mobil) {
+    @content;
+  }
+}
+
+@mixin cel-2($mobil-2: 525px) {
+    @media screen and (max-width: $mobil-2) {
+      @content;
+    }
+  }
+
+@mixin cel-3($mobil-3: 525px) {
+    @media screen and (max-width: $mobil-3) {
+      @content;
+    }
+  }
+
+
+
+/*Escritorio */
+@mixin desk-1($desktop: 1350px ){
+    @media screen and (max-width: $desktop) {
+        @content;
+      }
+}
+
+@mixin desk-2($desktop-2: 1020px) {
+    @media screen and (max-width: $desktop-2) {
+      @content;
+    }
+}
+
+@mixin desk-3($desktop-3: 800px) {
+    @media screen and (max-width: $desktop-3) {
+      @content;
+    }
+}
+
+@mixin desk-4($desktop-min: 370px , $desktop-max: 768px) {
+    @media screen and (min-width: $desktop-min) and (max-width: $desktop-max){
+      @content;
+    }
+}
+
+
+
+
+
+
+

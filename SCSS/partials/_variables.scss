@@ -1,0 +1,42 @@
+/*Variables para colores*/
+
+$negro: black;
+$fondo: #eceff1;
+$banner: turquoise;
+$hover: #8b0eff;
+
+
+/*Variables para medidas*/
+$total: 100%;
+$tamano-carta: 300px;
+$cero: 0px;
+$nada: none;
+
+
+
+/*Variables para fuente */
+$fuente: "Nunito", sans-serif;
+
+/*Variables para display */
+
+$flexible: flex;
+$carta: grid;
+$centro: center;
+
+/*Maps*/
+
+$borders: (
+    "border-1" : 0.6em,
+    "border-2" : 2%,
+    "border-3" : 4px,
+    "border-4" : 5px,
+    "border-5" : 8px,
+);
+
+$display:(
+    "flexible": flex,
+    "carta": grid,
+
+);
+
+
