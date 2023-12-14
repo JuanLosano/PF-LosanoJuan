@@ -6,6 +6,43 @@ body {
   background-color: $fondo;
 }
 
+.cuerpo-404{
+  background-color: #0090c1;
+  width: $total;
+  height: 100vh;
+  display: $flexible;
+  justify-content: $centro;
+  align-items: $centro;
+
+  .error-404{
+    text-align: $centro;
+    width: $total;
+    max-width: 400px;
+    background-color:#183446;
+    box-shadow: $cero 1px 10px rgba(0,0,0,0.3);
+    border-radius: map-get($borders, "border-5" );
+    line-height: 1.7;
+    color: $fondo;
+  }
+
+  .boton-404{
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    text-decoration: $nada;
+    background-color: #046E8F;
+    color: $fondo ;
+    border-radius: map-get($borders, "border-5" );
+    
+
+    &:hover {
+      background-color: #38AECC;
+      transition: 0.5s;
+    }
+  }
+}
+
 /* INICIO DE HEADER Y NAV */
 
 .navbar-brand img {
