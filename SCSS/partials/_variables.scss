@@ -23,5 +23,20 @@ $flexible: flex;
 $carta: grid;
 $centro: center;
 
+/*Maps*/
+
+$borders: (
+    "border-1" : 0.6em,
+    "border-2" : 2%,
+    "border-3" : 4px,
+    "border-4" : 5px,
+    "border-5" : 8px,
+);
+
+$display:(
+    "flexible": flex,
+    "carta": grid,
+
+);
 
 
